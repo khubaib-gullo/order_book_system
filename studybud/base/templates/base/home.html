@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my app</title>
+</head>
+<body>
+
+<h1> container Information </h1>
+{% for container in containers %}
+<h3>Container Name: {{ container.container_name }}</h3>
+<small>Company Name: {{ container.company_name }}</small>
+<p>Recieve Date: {{ container.receive_date }}</p>
+
+{% endfor %}
+
+<hr>
+
+<h1> Product Information</h1>
+{% for product in products %}
+<h3>Product Name: {{ container.name }}</h3>
+<small>Product Company: {{ product.description }}</small>
+<p>Price: {{ product.price }}</p>
+<p>Customer name: {{ product.host }}</p>
+<p>Recieve Date: {{ product.container_id.receive_date | timesince }}</p>
+
+{% endfor %}
+
+
+</body>
+</html>
